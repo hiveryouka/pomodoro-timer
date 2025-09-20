@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="timer">
+            <div class="progress-ring">
+                <svg class="progress-ring__circle" width="200" height="200">
+                    <circle class="progress-ring__circle-bg" cx="100" cy="100" r="90" />
+                    <circle class="progress-ring__circle-progress" cx="100" cy="100" r="90" />
+                </svg>
+                <div class="timer-display">
+                    <div class="time">25:00</div>
+                    <div class="mode">作業時間</div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="startBtn" class="btn">開始</button>
+                <button id="pauseBtn" class="btn">一時停止</button>
+                <button id="resetBtn" class="btn">リセット</button>
+            </div>
+        </div>
+        <div>
+            <div>
+                音量：<input type="range" id="volumeControlBGM" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </div>
+    </div>
+
+    <audio id="workAudio" loop>
+        <source src="BGM/task/Secret_Talk_2.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
